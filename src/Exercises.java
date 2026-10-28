@@ -36,8 +36,12 @@ public class Exercises {
      * @param toAdd the value to add to the front
      * @return the new head of the linked list
      */
-    public static ListNode prepend(ListNode head, int toAdd) {
-        return null;
+    public static ListNode prepend(ListNode head, int toAdd) 
+    {
+        ListNode current = head;
+        current = new ListNode(toAdd);
+        current.next = head;
+        return current;
     }
 
     /**
