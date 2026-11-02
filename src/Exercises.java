@@ -82,8 +82,26 @@ public class Exercises {
      * @param head the head of the linked list
      * @return the minimum value in the list 
      */
-    public static int min(ListNode head) {
-        return -1;
+    public static int min(ListNode head) 
+    {
+        if(head == null)
+        {
+            return Integer.MAX_VALUE;
+        }
+
+        int min = head.data;
+        ListNode current = head;
+
+        while(current != null)
+        {
+            if(current.data < min)
+            {
+                min = current.data;
+            }
+            current = current.next;
+        }
+        
+        return min;
     }
 
     /**
